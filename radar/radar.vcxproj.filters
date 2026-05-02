@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="retina.cpp" />
+    <ClCompile Include="network.cpp" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\window.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\vulkan.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\wgl_context.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_init.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_joystick.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_module.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_monitor.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_thread.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_time.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_window.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\platform.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_init.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_joystick.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_monitor.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_window.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\osmesa_context.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\init.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\input.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\monitor.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\context.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\egl_context.c">
+      <Filter>thirdparty\glfw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d_meshes.cpp">
+      <Filter>thirdparty\implot3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d_demo.cpp">
+      <Filter>thirdparty\implot3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d_items.cpp">
+      <Filter>thirdparty\implot3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d.cpp">
+      <Filter>thirdparty\implot3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_widgets.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_demo.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_draw.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\imgui\\backends\\imgui_impl_glfw.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\imgui\\backends\\imgui_impl_opengl3.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_tables.cpp">
+      <Filter>thirdparty\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_console.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="implot3d_custom.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="radar_shared_memory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="retina.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="implot3d_custom.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="debug_console.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="radar_shared_layout.h" />
+    <ClInclude Include="radar_shared_memory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="thirdparty">
+      <UniqueIdentifier>{3b47af3c-2981-4aff-b5fd-e644904b37aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\glfw">
+      <UniqueIdentifier>{f3c7b3b6-e272-49d4-b156-4467ccff714c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\implot3d">
+      <UniqueIdentifier>{84e269e5-4f55-44da-8470-43dc60e4d694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thirdparty\imgui">
+      <UniqueIdentifier>{b67f8832-844f-4caa-a84f-508f44a91d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{05ff97c0-0f3c-4e30-92d3-9a51896f7591}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

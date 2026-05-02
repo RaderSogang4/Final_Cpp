@@ -1,0 +1,72 @@
+실행 순서 (순서 중요!)
+순서 1.  dummy_shared_memory_writer.py   ← 터미널 1
+순서 2.  radar_tcp_sender.py             ← 터미널 2
+순서 3.  Unity Play 버튼                 ← Unity Editor
+
+Step 1 — 터미널 1 : Shared Memory 생성
+bashpython dummy_shared_memory_writer.py
+정상 출력:
+[dummy] creating shared memory: Local\RadarPointCloudSharedMemory
+[dummy] size: 4456732 bytes
+[dummy] frame=0        points=1600   targets=5
+[dummy] frame=1        points=1600   targets=5   ...
+→ 이 터미널은 계속 켜둬야 합니다
+
+Step 2 — 터미널 2 : TCP 서버 시작
+bashpython radar_tcp_sender.py
+# config 파일 쓸 경우:
+python radar_tcp_sender.py --config cluster_config_example.json
+정상 출력:
+==================================================
+  레이더 TCP 브릿지 시작
+  Unity 연결 대기 중... 127.0.0.1:9000
+==================================================
+→ Unity가 접속할 때까지 여기서 대기합니다
+
+Step 3 — Unity : RadarReceiver.cs 설치 후 Play
+Unity 설정 방법:
+1. RadarReceiver.cs 를 Assets 폴더에 복사
+2. Hierarchy 에서 빈 GameObject 생성
+   (GameObject → Create Empty → 이름: "RadarManager")
+3. RadarManager 에 RadarReceiver 컴포넌트 추가
+   (Add Component → RadarReceiver)
+4. Inspector 확인:
+     Host : 127.0.0.1  ← 기본값 그대로
+     Port : 9000       ← 기본값 그대로
+5. Play 버튼 ▶ 클릭
+Unity Console 정상 출력:
+[Radar] Python 서버 연결 시도 중 127.0.0.1:9000
+[Radar] Python 서버 연결 성공 (127.0.0.1:9000)
+터미널 2 에 연결 확인:
+  Unity 연결됨: ('127.0.0.1', 54231)
+==================================================
+[Frame 00001] shm_frame=12  트래킹: 3개
+  ID=01  x=  0.123  y=  2.456  z= -1.789
+  ID=02  x= -0.987  y=  3.210  z=  0.543
+  ID=03  x=  1.234  y=  1.876  z=  2.109
+
+전체 그림
+┌─────────────────────────────────────────┐
+│             한 대의 PC                   │
+│                                         │
+│  [터미널 1]                              │
+│  dummy_shared_memory_writer.py          │
+│         │                               │
+│         ▼  Shared Memory                │
+│  [터미널 2]                              │
+│  radar_tcp_sender.py                    │
+│         │                               │
+│         ▼  TCP 127.0.0.1:9000           │
+│  [Unity Editor]                         │
+│  RadarReceiver.cs                       │
+│         │                               │
+│         ▼                               │
+│  Scene 내 오브젝트에 위치 적용           │
+└─────────────────────────────────────────┘
+
+종료 방법
+1. Unity Stop 버튼 ■
+2. 터미널 2  Ctrl+C
+3. 터미널 1  Ctrl+C
+
+주의: dummy_shared_memory_writer.py가 실행 중이어야 radar_tcp_sender.py가 Shared Memory를 읽을 수 있습니다. 순서를 바꾸면 [shm] Shared Memory 대기 중 메시지가 뜨면서 자동으로 기다립니다.

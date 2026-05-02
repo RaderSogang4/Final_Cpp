@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="radar/radar.vcxproj" Id="d65f9bf8-1c62-40b1-9e20-a1eba33b2d19" />
+</Solution>

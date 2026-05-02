@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d65f9bf8-1c62-40b1-9e20-a1eba33b2d19}</ProjectGuid>
+    <RootNamespace>radar</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;NOMINMAX;WIN32_LEAN_AND_MEAN;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\asio\include;$(SolutionDir)thirdparty\imgui;$(SolutionDir)thirdparty\imgui\backends;$(SolutionDir)thirdparty\glfw\include;$(SolutionDir)thirdparty\glfw\src;$(SolutionDir)thirdparty\implot3d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;user32.lib;shell32.lib;ole32.lib;advapi32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;NOMINMAX;WIN32_LEAN_AND_MEAN;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\asio\include;$(SolutionDir)thirdparty\imgui;$(SolutionDir)thirdparty\imgui\backends;$(SolutionDir)thirdparty\glfw\include;$(SolutionDir)thirdparty\glfw\src;$(SolutionDir)thirdparty\implot3d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;user32.lib;shell32.lib;ole32.lib;advapi32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;NOMINMAX;WIN32_LEAN_AND_MEAN;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\asio\include;$(SolutionDir)thirdparty\imgui;$(SolutionDir)thirdparty\imgui\backends;$(SolutionDir)thirdparty\glfw\include;$(SolutionDir)thirdparty\glfw\src;$(SolutionDir)thirdparty\implot3d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Native</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;user32.lib;shell32.lib;ole32.lib;advapi32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;NOMINMAX;WIN32_LEAN_AND_MEAN;_GLFW_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\asio\include;$(SolutionDir)thirdparty\imgui;$(SolutionDir)thirdparty\imgui\backends;$(SolutionDir)thirdparty\glfw\include;$(SolutionDir)thirdparty\glfw\src;$(SolutionDir)thirdparty\implot3d;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Native</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;user32.lib;shell32.lib;ole32.lib;advapi32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="debug_console.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\context.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\init.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\input.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\monitor.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\platform.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\window.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_init.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_joystick.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_module.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_monitor.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_thread.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_time.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\win32_window.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\wgl_context.c" />
+    <ClCompile Include="..\\thirdparty\\imgui\\backends\\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\\thirdparty\\imgui\\backends\\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui.cpp" />
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_demo.cpp" />
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_draw.cpp" />
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_tables.cpp" />
+    <ClCompile Include="..\\thirdparty\\imgui\\imgui_widgets.cpp" />
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d.cpp" />
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d_demo.cpp" />
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d_items.cpp" />
+    <ClCompile Include="..\\thirdparty\\implot3d\\implot3d_meshes.cpp" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\egl_context.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_init.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_joystick.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_monitor.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\null_window.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\osmesa_context.c" />
+    <ClCompile Include="..\\thirdparty\\glfw\\src\\vulkan.c" />
+    <ClCompile Include="implot3d_custom.cpp" />
+    <ClCompile Include="network.cpp" />
+    <ClCompile Include="radar_shared_memory.cpp" />
+    <ClCompile Include="retina.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="debug_console.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="radar_shared_layout.h" />
+    <ClInclude Include="radar_shared_memory.h" />
+    <ClInclude Include="retina.h" />
+    <ClInclude Include="implot3d_custom.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

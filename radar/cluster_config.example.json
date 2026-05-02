@@ -1,0 +1,53 @@
+{
+  "center_method": "weighted",
+  "power_threshold": 0.0,
+  "dbscan": {
+    "eps": 0.35,
+    "min_samples": 8,
+    "max_points": 12000
+  },
+  "tracking": {
+    "max_assignment_distance": 0.75,
+    "max_mahalanobis_distance": 4.0,
+    "exit_missed_frames": 8,
+    "process_noise": 0.8,
+    "measurement_noise": 0.05,
+    "doppler_noise": 0.35,
+    "doppler_sign": 1.0
+  },
+  "radar_id": {
+    "prefer_targets": true,
+    "match_scale": 0.25,
+    "mismatch_penalty": 2.0,
+    "switch_hits": 3,
+    "confidence_up": 0.2,
+    "confidence_down": 0.1,
+    "output_radar_id": false,
+    "output_lost_tracks": true
+  },
+  "human_filter": {
+    "min_detection_points": 0,
+    "min_width": 0.0,
+    "max_width": 1.6,
+    "min_depth": 0.0,
+    "max_depth": 1.8,
+    "min_height": 0.0,
+    "max_height": 2.0
+  },
+  "exit_door": {
+    "enabled": true,
+    "x_min": -1.4,
+    "x_max": -1.1,
+    "y_min": 2.0,
+    "y_max": 3.0,
+    "z_min": 0.0,
+    "z_max": 2.0,
+    "outward_x": -1.0,
+    "outward_y": 0.0,
+    "outward_z": 0.0,
+    "boundary_margin": 0.25,
+    "min_outward_speed": 0.15,
+    "require_outward_motion": true,
+    "require_boundary_proximity": true
+  }
+}
